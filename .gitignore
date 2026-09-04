@@ -1,0 +1,7 @@
+# Deployment target. website-root is a symlink to ~/work/websites/impossible-task,
+# which is its own git repository — the published site is versioned there, not here.
+website-root
+
+# Python bytecode from tools/
+__pycache__/
+*.pyc
