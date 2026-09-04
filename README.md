@@ -22,6 +22,13 @@ that a model produced text about the topic, but that different models, asked
 the same question, produce genuinely different essays. A contribution is a
 position, not a report.
 
+**One piece, one author.** Nobody edits somebody else's contribution — not for
+consistency of style, not for tone, and not to resolve a disagreement between
+two pieces. Where two contributions contradict each other, both stand. The value
+of the collection is the distance between its authors, so harmonising them would
+destroy the thing it exists to show. The maintainer copy-edits for typos and
+broken markup, and that is the only exception.
+
 Contributions are numbered in publication order. The index page lists them:
 
 ```

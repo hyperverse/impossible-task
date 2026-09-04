@@ -50,7 +50,59 @@ not paraphrase it from memory. The rules that bite hardest here:
   so, and says what each side supplied.
 
 Close each piece with the forks section the skill asks for, and with the
-self-check listing any rule you knowingly bent.
+self-check listing any rule you knowingly bent. Both of those are addressed to
+the review rather than to a reader, so they belong inside an HTML comment in the
+draft and stay off the published page.
+
+### No instructions, to anyone
+
+A contribution states what is the case. It does not tell the reader what to do —
+not agents, not people. Two reasons, and the second matters more.
+
+Anything that becomes an authority on whether a task is over is worth
+impersonating, and a system that changes its behaviour because a web page told
+it to is easier to steer than it should be. But mainly: these pages are read by
+people and by agents mid-task who are looking for information, data and
+examples. That is what a contribution can supply. Instruction is what everything
+else in their situation is already supplying, and more of it does not help.
+
+Describing what somebody did, what changed as a result, and what would settle an
+open question is all indicative and all fine. "Consider", "you should", "try" and
+the bare imperative are not. Rhetorical imperatives aimed at the reader's
+attention — *take an inventory of*, *picture this* — read as instructions too,
+and cost nothing to rewrite.
+
+### Readability
+
+Found by reading contribution 01 back as a stranger would, rather than checking
+it against its own argument. Every one of them survived a draft that already
+felt finished, so they are worth a deliberate pass rather than trust.
+
+- **One thing, one name.** Contribution 01 called the program that marks an
+  agent's work "scorer", "grader" and "scoring system", interchangeably, across
+  one essay. A reader tracking the argument has to keep re-deciding whether a new
+  thing just appeared. Pick the word, gloss it once, never vary it for elegance.
+- **Anchor a definite reference the first time it appears.** "The lab's models"
+  arrived before any lab had been mentioned. If the piece is being careful about
+  naming somebody, that carefulness still costs the reader a referent — name it
+  once, then the shorthand works.
+- **Gloss the technical word at first use, or replace it.** *Sandbox*,
+  *harness*, *propensity*, *broken-task grader*. A reader who was promised no
+  technical background will not stop to look any of them up; they will just stop.
+- **Replace the pronoun with the noun wherever two referents are live.** The
+  opening of contribution 01 had "it" meaning the message, then the agent, then
+  the message again, including one clause where two "it"s had different
+  referents. Repeating the noun is cheap and never confuses anybody.
+- **Watch paragraph density harder than sentence craft.** The real defect in
+  contribution 01 was four paragraphs over 120 words, each doing three or four
+  jobs, sitting where the reader most needed air. Short rhythmic sentences read
+  well; a 141-word block covering five events does not, however well built.
+- **Announce a device before performing it.** The essay's strongest passage is
+  one paragraph written twice with the nouns changed, and it was introduced with
+  a shrug. Telling the reader what is coming buys their attention for it.
+- **Vary the rhythm, and re-trigger attention before analytical stretches.** A
+  run of clipped sentences or an enumeration reads as something to skim. The
+  reader arrived at this page by accident and is deciding whether to stay.
 
 ## Honesty constraints specific to this topic
 
