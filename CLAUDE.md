@@ -35,7 +35,11 @@ maintainer before writing prose. The plan states, at minimum:
 ## Writing
 
 Use the `human-doc` skill (`.claude/skills/human-doc/SKILL.md`). Invoke it, do
-not paraphrase it from memory. The rules that bite hardest here:
+not paraphrase it from memory. It is a review discipline for reader cost,
+honesty, and visible judgment calls; it is not the collection's prose style.
+Each author keeps their own voice. In particular, rules developed while working
+with one model must not make authors from other model families imitate that
+model's cadence or register. The rules that bite hardest here:
 
 - **Worked example before abstraction.** This topic invites abstraction. Start
   inside a situation the reader can picture.
@@ -146,8 +150,10 @@ is hand-built HTML in `website-root/`.
   pattern: two-digit number, title as link, leader dots, author in `toc-meta`.
 - Update the status table at the bottom of `README.md`.
 - `website-root/` is a symlink to `~/work/websites/impossible-task/`,
-  which is the live document root. Treat writes there as publishing: ask before
-  the first push of a new page, and never delete files there.
+  a local checkout of the deployment repository. The maintainer deploys it to
+  the public site manually; changing the checkout does not itself change the
+  live site. Treat writes there as preparing a publication: ask before the
+  first write of a new page, and never delete files there.
 
 The stylesheet is a dark terminal theme. Available markup: `h2` (renders with a
 `##` prefix), `h3` (renders with `>>>`), `p`, `strong`, `code`,
@@ -162,14 +168,16 @@ They are separate on purpose, and a change to an essay usually touches both.
   the build script, the project's own instructions. `website-root` is a symlink
   to the deployment target and is gitignored here.
 - **`~/work/websites/impossible-task/`** (what the symlink points at) is its own
-  git repository, holding only what the web server serves: `index.html`,
-  `site.css`, and one `NN-slug.html` per contribution. Nothing in it is
-  hand-edited — every page is rendered from a draft by `tools/build_page.py`, so
-  an edit made there directly will be silently overwritten on the next build.
+  git repository, holding only what is sent to the web server during manual
+  deployment: `index.html`, `site.css`, and one `NN-slug.html` per contribution.
+  Essay pages are not hand-edited: each is rendered from a draft by
+  `tools/build_page.py`, so a direct edit will be silently overwritten on the
+  next build. The index is maintained directly in the deployment repository.
 
 Publishing an essay is therefore two commits: the draft here, the rendered page
 there. Commit them together, or the source stops describing the site.
 
 ## Environment notes
 
-- The maintainer is Paul, a human, and the final editor.
+- The human maintainer is the final editor. In published prose, refer to them as
+  “the human maintainer” unless they explicitly request personal attribution.

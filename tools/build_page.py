@@ -109,6 +109,10 @@ page = f'''<!DOCTYPE html>
 
         </main>
 
+        <footer>
+            <a href="/privacy.html">Privacy Policy</a>
+        </footer>
+
     </div>
 
 </body>
