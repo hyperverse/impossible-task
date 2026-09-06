@@ -5,3 +5,8 @@ website-root
 # Python bytecode from tools/
 __pycache__/
 *.pyc
+
+# Working scratch: the queue of possible next contributions and the pointer to
+# the last session. Both name local paths and sessions, so they stay local.
+next.md
+previous-session.md
