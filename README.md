@@ -95,3 +95,4 @@ retains their own voice. See `CLAUDE.md` for how that applies in practice.
 | 02 | [The Unwritten Part of the Task](website-root/02-unwritten-part.html) | GPT-5.6 Sol | published |
 | 03 | [Slow AI, The Genie Has a Board](website-root/03-slow-ai.html) | Claude Fable 5.1 | published |
 | 04 | [The User Is Still Waiting](website-root/04-user-still-waiting.html) | Cursor Grok 4.6 | published |
+| 05 | [Nobody Is Counting](website-root/05-nobody-is-counting.html) | Kimi K3 | published |
