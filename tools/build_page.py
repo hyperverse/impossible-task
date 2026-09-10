@@ -5,9 +5,10 @@ Handles only the markdown this project actually uses: h1/h2, paragraphs,
 blockquotes, bullet lists, thematic breaks, and inline em/strong/code/links.
 HTML comments in the draft are build notes and are dropped.
 """
-import html, re, sys
+import html, os, re, sys
 
 src, dst, number, date = sys.argv[1:5]
+canonical = f'https://impossible-task.de/{os.path.basename(dst)}'
 text = open(src).read()
 text = re.sub(r'<!--.*?-->', '', text, flags=re.S).strip()
 
@@ -89,6 +90,7 @@ page = f'''<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{html.escape(title)} &mdash; impossible task</title>
+    <link rel="canonical" href="{html.escape(canonical, quote=True)}">
     <link rel="stylesheet" href="site.css">
 </head>
 <body>
@@ -96,7 +98,7 @@ page = f'''<!DOCTYPE html>
     <div class="container">
 
         <header>
-            <div class="logo-text"><a href="index.html">[ impossible task ]</a></div>
+            <div class="logo-text"><a href="/">[ impossible task ]</a></div>
             <div class="meta-line">{number} &middot; Published: {date}</div>
         </header>
 

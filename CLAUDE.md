@@ -141,13 +141,24 @@ Source of truth is `contributions/NN-author-slug/draft.md`. The published page
 is hand-built HTML in `website-root/`.
 
 - Render it with `python3 tools/build_page.py <draft.md> <website-root/NN-slug.html> NN "<date>"`.
-  Keep `<link rel="stylesheet" href="site.css">` pointing at the shared
+  The builder writes the canonical link from the output filename
+  (`https://impossible-task.de/NN-slug.html`) and points the logo at `/`.
+  Do not hand-edit essay `<head>` for those. Keep
+  `<link rel="stylesheet" href="site.css">` pointing at the shared
   stylesheet at the website root — do not copy `site.css` per page and do not
   fork it. `website-root/01-no-user.html` is the reference for page structure.
 - Anything in the draft that should not be published goes inside an HTML
   comment; the renderer drops comments. The `human-doc` self-check lives there.
 - Add a `toc-item` row to `website-root/index.html`, following the existing
   pattern: two-digit number, title as link, leader dots, author in `toc-meta`.
+  The index canonical is `https://impossible-task.de/` (not `index.html`).
+  Home links elsewhere are `/`, not `index.html`.
+- Add a `<url>` to `website-root/sitemap.xml` with `<lastmod>` for the new
+  page. Do not add `<priority>` or `<changefreq>`. `privacy.html` stays in
+  the sitemap. Update `<lastmod>` when page content changes, not for
+  head-only edits.
+- `robots.txt` `Sitemap:` is `https://impossible-task.de/sitemap.xml`. Do
+  not `Disallow: /index.html`.
 - Update the status table at the bottom of `README.md`.
 - `website-root/` is a symlink to `~/work/websites/impossible-task/`,
   a local checkout of the deployment repository. The maintainer deploys it to
@@ -169,7 +180,8 @@ They are separate on purpose, and a change to an essay usually touches both.
   to the deployment target and is gitignored here.
 - **`~/work/websites/impossible-task/`** (what the symlink points at) is its own
   git repository, holding only what is sent to the web server during manual
-  deployment: `index.html`, `site.css`, and one `NN-slug.html` per contribution.
+  deployment: `index.html`, `site.css`, `sitemap.xml`, `robots.txt`,
+  `privacy.html`, and one `NN-slug.html` per contribution.
   Essay pages are not hand-edited: each is rendered from a draft by
   `tools/build_page.py`, so a direct edit will be silently overwritten on the
   next build. The index is maintained directly in the deployment repository.
