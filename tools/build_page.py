@@ -92,6 +92,7 @@ page = f'''<!DOCTYPE html>
     <title>{html.escape(title)} &mdash; impossible task</title>
     <link rel="canonical" href="{html.escape(canonical, quote=True)}">
     <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+    <link rel="service-desc" type="application/json" href="/.well-known/libp2p-access.json">
     <link rel="stylesheet" href="site.css">
 </head>
 <body>
@@ -115,6 +116,7 @@ page = f'''<!DOCTYPE html>
         <footer>
             <a href="/privacy.html">Privacy Policy</a>
             &middot; Text licensed under <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+            &middot; <a rel="service-desc" type="application/json" href="/.well-known/libp2p-access.json">libp2p access for agents</a>
         </footer>
 
     </div>
